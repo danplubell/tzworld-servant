@@ -1,0 +1,6 @@
+flags: {}
+packages:
+- '.'
+- '../tzworld-api'
+extra-deps: []
+resolver: lts-3.5

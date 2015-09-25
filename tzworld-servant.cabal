@@ -1,0 +1,31 @@
+Name:                tzworld-servant
+Version:             0.1
+Synopsis:            Web service for finding a time zone by location
+Description:         Web service for finding a time zone by location 
+License:             MIT
+Author:              Dan Plubell
+Maintainer:          danplubell@gmail.com
+Stability:           Experimental
+Category:            Web
+Build-type:          Simple
+Cabal-version:       >=1.2
+
+Executable tzworld-servant
+  hs-source-dirs: src
+  main-is: Main.hs
+
+  Build-depends:
+                    base                      >= 4     && < 5
+                , servant-server
+                , tzworld-api
+                , aeson
+                , wai >= 3.0.3.0
+                , warp >= 3.1.3
+                , either
+              , bytestring
+              , transformers
+  if impl(ghc >= 6.12.0)
+    ghc-options: -threaded -Wall -fwarn-tabs -funbox-strict-fields -O2
+                 -fno-warn-unused-do-bind
+  else
+    ghc-options: -threaded -Wall -fwarn-tabs -funbox-strict-fields -O2
