@@ -3,4 +3,4 @@ packages:
 - '.'
 - '../tzworld-api'
 extra-deps: []
-resolver: lts-3.5
+resolver: lts-3.6
